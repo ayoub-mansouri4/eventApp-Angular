@@ -1,8 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from '../services/login.service';
-import { User } from '../user';
+import { LoginService } from '../../services/login.service';
+import { User } from '../../objects/user';
 
 @Component({
   selector: 'app-user-login',
@@ -11,6 +11,7 @@ import { User } from '../user';
 })
 export class UserLoginComponent implements OnInit {
    user:User=new User();
+   id!:string;
    
 
   constructor(private loginService:LoginService,private router:Router) { }
@@ -29,6 +30,8 @@ export class UserLoginComponent implements OnInit {
        if(resp!=null){
         sessionStorage.setItem('email',resp.email);
         sessionStorage.setItem('password',resp.password);
+        this.id=resp.id.toString();
+        sessionStorage.setItem('id',this.id);
         this.router.navigate(["/home"]);
        }
      },

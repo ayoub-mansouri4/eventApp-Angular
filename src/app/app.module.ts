@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from  '@angular/common/http'
-import { LoginService } from './components/services/login.service';
+import { LoginService } from './services/login.service';
 import { HomeComponent } from './components/home/home.component';
 import { UserRegisterComponent } from './components/user-register/user-register.component';
+import { AddEventComponent } from './components/add-event/add-event.component';
+import { MyeventsComponent } from './components/myevents/myevents.component';
  
 
 @NgModule({
@@ -16,7 +18,9 @@ import { UserRegisterComponent } from './components/user-register/user-register.
     AppComponent,
     UserLoginComponent,
     HomeComponent,
-    UserRegisterComponent
+    UserRegisterComponent,
+    AddEventComponent,
+    MyeventsComponent
   ],
   imports: [
     BrowserModule,

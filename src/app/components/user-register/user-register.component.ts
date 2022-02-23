@@ -1,8 +1,8 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginService } from '../services/login.service';
-import { User } from '../user';
+import { LoginService } from '../../services/login.service';
+import { User } from '../../objects/user';
 
 @Component({
   selector: 'app-user-register',
