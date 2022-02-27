@@ -10,4 +10,5 @@ export class EventDetails{
     location:Location=new Location();
     eventOwner:User=new User();
     participants!:Participant[];
+    participated!:boolean;
 }

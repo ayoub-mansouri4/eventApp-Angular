@@ -15,6 +15,8 @@ export class AddEventComponent implements OnInit {
 
   ngOnInit(): void {
     this.eventDeatils.eventOwner.id=Number(sessionStorage.getItem('id'));
+    if(sessionStorage.getItem("email")==undefined)
+    this.router.navigate(['/index']);
   
   }
 
@@ -22,6 +24,7 @@ export class AddEventComponent implements OnInit {
     this.eventService.saveEvent(this.eventDeatils).subscribe(
       (resp:EventDetails)=>{
         console.log(this.eventDeatils)
+        this.router.navigate([`/myEvents`])
       },
       (error:HttpErrorResponse)=>{console.log(error)}
     );

@@ -11,6 +11,14 @@ import { HomeComponent } from './components/home/home.component';
 import { UserRegisterComponent } from './components/user-register/user-register.component';
 import { AddEventComponent } from './components/add-event/add-event.component';
 import { MyeventsComponent } from './components/myevents/myevents.component';
+import { MapComponent } from './components/map/map.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AllEventsComponent } from './components/all-events/all-events.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ProfilComponent } from './components/profil/profil.component';
+import { IndexComponent } from './components/index/index.component';
+import { MyParticipationsComponent } from './components/my-participations/my-participations.component';
+
  
 
 @NgModule({
@@ -20,13 +28,20 @@ import { MyeventsComponent } from './components/myevents/myevents.component';
     HomeComponent,
     UserRegisterComponent,
     AddEventComponent,
-    MyeventsComponent
+    MyeventsComponent,
+    MapComponent,
+    AllEventsComponent,
+    NavBarComponent,
+    ProfilComponent,
+    IndexComponent,
+    MyParticipationsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule, //
     HttpClientModule,//
+    NgbModule//
     
   ],
   providers: [LoginService],//

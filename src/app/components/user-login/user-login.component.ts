@@ -30,6 +30,8 @@ export class UserLoginComponent implements OnInit {
        if(resp!=null){
         sessionStorage.setItem('email',resp.email);
         sessionStorage.setItem('password',resp.password);
+        sessionStorage.setItem('firstName',resp.firstName);
+         sessionStorage.setItem('lastName',resp.lastName);
         this.id=resp.id.toString();
         sessionStorage.setItem('id',this.id);
         this.router.navigate(["/home"]);

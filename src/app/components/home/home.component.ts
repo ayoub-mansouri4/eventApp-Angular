@@ -14,13 +14,25 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     if(sessionStorage.getItem("email")==undefined)
-    this.router.navigate(['/login']);
+    this.router.navigate(['/index']);
   }
-
-
-
   logout(){
     sessionStorage.clear();
-    this.router.navigate(['/']);
+    this.router.navigate(['/index']);
   }
+
+ btnClick() {
+         this.router.navigateByUrl('/login');
+ };
+btnClk(){    this.router.navigateByUrl('/register');
+            };
+
+
+btnCl(){
+                     this.router.navigateByUrl('/home');
+             };
+  btnCli(){
+                                 this.router.navigateByUrl('/product');
+                         };
+                        
 }

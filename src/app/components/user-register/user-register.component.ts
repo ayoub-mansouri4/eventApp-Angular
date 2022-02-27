@@ -24,10 +24,11 @@ export class UserRegisterComponent implements OnInit {
     resp.subscribe(
       (resp:User)=>{
         if(resp!=null){
-          alert(resp.email+" "+this.user.email)
-         sessionStorage.setItem('email',resp.email);
-         sessionStorage.setItem('password',resp.password);
-         this.router.navigate(["/home"]);
+          sessionStorage.setItem('email',resp.email);
+          sessionStorage.setItem('password',resp.password);
+          sessionStorage.setItem('firstName',resp.firstName);
+          sessionStorage.setItem('lastName',resp.lastName);
+          this.router.navigate(["/home"]);
         }
       },
       (error:HttpErrorResponse)=>{
