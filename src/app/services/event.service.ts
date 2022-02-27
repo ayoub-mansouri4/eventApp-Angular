@@ -41,7 +41,7 @@ export class EventService {
  public  getEventsP(id:number):Observable<EventDetails[]>{
   return this.http.get<EventDetails[]>(`${this.urlServerApi}/event/getEventsP/${id}`)
  }
- 
+ //
 
   
 }
